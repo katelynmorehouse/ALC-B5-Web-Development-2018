@@ -5,11 +5,10 @@ body{
     background-color:mediumpurple;
 }
 
-div#container{
-    margin:auto;
-    width: 1024px;
-    background-color:orange;
-    }
+#container{
+    display: flex;
+    flex-direction: column;
+}
 
 header{
     display: block;
@@ -70,12 +69,8 @@ nav .active{
 }
 
 #content{
-    width: 100%;
-    height: 400px;
-    
-    
-   
-    
+    display: flex;
+    flex-direction: row;
 }
 
 .keepOpen{
@@ -84,9 +79,10 @@ nav .active{
 
 footer{
     width: 100%;
-    background-color: mediumpurple;
+    background-color: black;
     color:white;
     text-align: center;
+    clear: both;
 }
 
 
@@ -95,6 +91,7 @@ footer{
     display:block;
     width:400px;
     margin:10px;
+    height: 200px;
         border:5px pink outset;
     float: left;
     
@@ -107,7 +104,8 @@ footer{
 }
 #h2-main{
     float: left;
-    width:700px;
+    width:800px;
+    clear: right;
     color:black;
     text-shadow: 1px 1px 10px white;
 /*    margin-left: 10px;*/
@@ -116,9 +114,9 @@ footer{
 }
 
 
-#p-main{
+#p-Main{
     float:left;
-    width: 400px;
+    width: 1000px;
     
 }
 img#s-silly{
@@ -135,15 +133,20 @@ h2#h2-about{
 }
 p#p-about{
     float:left;
-    width: 48%;
+    width: 800px;
     margin-top:10px;
+    clear: right;
 }
 
 /* produce.html */
 #gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     border:3px dotted white;
     width:100%;
-    clear:both;
+   
 }
 figure{
     border:2px black outset;
@@ -152,6 +155,7 @@ figure{
     width: 300px;
     float: left;
     margin: 10px 15px;
+    flex: 0 0 30%
     
         /*CSS Gradient*/
 }
@@ -169,6 +173,59 @@ figcaption{
     margin-bottom: 10px;
     font-family:sans-serif;
 }
+
+#h-haunting {
+    align-self: center;
+}
+
+/* contact.html */
+h2#h2- contact{
+    margin: 15px;
+    float:left;
+}
+form#form-contact{
+    margin-left: 15px;
+    float:left;
+}
+
+form input{
+    margin-bottom: 10px;
+}
+
+div#contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
