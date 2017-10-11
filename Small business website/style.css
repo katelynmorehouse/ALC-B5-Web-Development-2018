@@ -184,17 +184,27 @@ h2#h2- contact{
     float:left;
 }
 form#form-contact{
-    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
     float:left;
+    margin-left: 15px;
 }
 
 form input{
     margin-bottom: 10px;
+    float: left;
 }
 
+div#map{
+    margin-top: 0;
+    margin-right: 20px;
+    float: right;
+}
 div#contact-content {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
 }
 
 .description {
