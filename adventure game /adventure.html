@@ -8,57 +8,41 @@
 
 <body>
     <script>
-//        alert("Warning Will Robinson! Warning!");
+        document.write("<h1 style='color:blue'>Adventure Game 1.0</h1>");
         
-//        confirm("Did you like the last Jedi movie?");
+        var playerName = prompt("What is your name?");
         
-//        prompt("How has your day been, so far?");
+        alert("good to meet you " + playerName + "!");
         
-        /*var dinner = confirm("Do you finish your dinner?!");
+        var beginAdv = prompt("You awake from nap beneath a old apple tree in a beautiful forest of green. There is a traveled path to the west. The dark forest to the east. A cave to the south. And misty mountains to the north. Which path do you take?").toLowerCase();
         
-        if(dinner){
-            alert("Fine! Have some desert!")
+        if(beginAdv == "west"){
+            var path = prompt("the path is rough and rugged for miles. You see an old deserted castle in the distance to the north. dense forests fence the way on both sides ").toLowerCase();
+            
+            if(path == "north"){
+               castle = prompt("You enter the ruins of the castle through the broken and splintered door. It is dark and rubble rests on the worn damp stone floor. Stairs go down to the basement. There is a dark doorway to the east.").toLowerCase();
+                if(castle == "stairs" || catsle == "go down" || castle == "down"){
+                    var basement = prompt ("You enter the basement. It is ark except for the faint glow of a torch at the end of a long hallway extending to the south.")  
+                }
+                else if (castle == " east" || castle == "dark doorway"){
+                  alert("You come eye to eye with a ghostly wraith! The last this you hear is your own scream! THE END!");               
+                }
+                else{
+                    alert("You loose your footing anad fall hitting your head on the stone floor. THE END!");
+                }
+                
+            }                
+            else{
+                ("You stray fro the path and disapper forever!");
+            }
         }
-        else{
-            alert("No desert for you!!");
-        }*/
-        
-        var favColor = prompt("What is your favorite color").toLowerCase();
-        
-        /*if(favColor == "green"){
-            alert("Your Favorite Color is " + favColor);
+        else if(beginAdv == "east"){
+            
         }
-        else if(favColor == "blue"){
-            alert("Your Favorite Color is " + favColor);
+        else if(beginAdv == "south"){
         }
-        
-        else if(favColor == "red"){
-            alert("Your Favorite Color is " + favColor);
+        else if(beginAdv == "north"){
         }
-    
-        else if(favColor == "yellow"){
-            alert("Your Favorite Color is " + favColor);
-        }
-        else{
-            alert(favColor + " is not a color!");
-        }*/
-        
-        switch(favColor){
-            case "green":
-                 alert("Your Favorite Color is " + favColor);
-            break;
-             case "red":
-                 alert("Your Favorite Color is " + favColor);
-            break;
-             case "blue":
-                 alert("Your Favorite Color is " + favColor);
-            break;
-             case "yellow":
-                 alert("Your Favorite Color is " + favColor);
-            break;
-            default: alert("Thats not a color");
-                break
-                       }
         
     </script>
 </body>
