@@ -8,41 +8,78 @@
 
 <body>
     <script>
-        document.write("<h1 style='color:blue'>Adventure Game 1.0</h1>");
+//        document.write("<h1 style='color:blue'>Adventure Game 1.0</h1>");
+        start();
         
-        var playerName = prompt("What is your name?");
-        
-        alert("good to meet you " + playerName + "!");
-        
-        var beginAdv = prompt("You awake from nap beneath a old apple tree in a beautiful forest of green. There is a traveled path to the west. The dark forest to the east. A cave to the south. And misty mountains to the north. Which path do you take?").toLowerCase();
-        
-        if(beginAdv == "west"){
-            var path = prompt("the path is rough and rugged for miles. You see an old deserted castle in the distance to the north. dense forests fence the way on both sides ").toLowerCase();
+        function start(){ 
             
-            if(path == "north"){
-               castle = prompt("You enter the ruins of the castle through the broken and splintered door. It is dark and rubble rests on the worn damp stone floor. Stairs go down to the basement. There is a dark doorway to the east.").toLowerCase();
-                if(castle == "stairs" || catsle == "go down" || castle == "down"){
-                    var basement = prompt ("You enter the basement. It is ark except for the faint glow of a torch at the end of a long hallway extending to the south.")  
-                }
-                else if (castle == " east" || castle == "dark doorway"){
-                  alert("You come eye to eye with a ghostly wraith! The last this you hear is your own scream! THE END!");               
-                }
-                else{
-                    alert("You loose your footing anad fall hitting your head on the stone floor. THE END!");
-                }
-                
-            }                
-            else{
-                ("You stray from the path and disapper forever! THE END!");
+            var playerName = prompt("What is your name?");
+        
+            alert("Welcome to the land of yababa" + playerName);
+        
+            var startGame = confirm("Are you ready to begin your adventure?")
+            
+            if(startGame){
+                villiage();
             }
-        }
-        else if(beginAdv == "east"){
+            else{
+                alert("Goodbye");
+            }
             
         }
-        else if(beginAdv == "south"){
-        }
-        else if(beginAdv == "north"){
-        }
+        
+         
+       function villiage(){
+             var villiage = prompt("You arrive at a villiage. There is a blacksmith,inn, stable and several wooden homes").toLowerCase();
+            
+           switch(villiage){
+           
+           case "blacksmith":
+                alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.")
+           break;
+           case "inn":
+                alert("You enter the old weather torn inn the innkeeper asks what he can do for you? Rent a room. Buy food. Sit by the hearth fire.");
+            break;
+            case "stable":
+                   alert("The stable master inorms you that all the hores have been stolen last night. He asks you for your help?")
+            break;
+            default:
+                   alert("I do not understand" + villiage);
+                   
+                   villiage();
+           }
+                   
+       }
+   
+           
+        
+//        if(beginAdv == "west"){
+//            var path = prompt("the path is rough and rugged for miles. You see an old deserted castle in the distance to the north. dense forests fence the way on both sides ").toLowerCase();
+//            
+//            if(path == "north"){
+//               castle = prompt("You enter the ruins of the castle through the broken and splintered door. It is dark and rubble rests on the worn damp stone floor. Stairs go down to the basement. There is a dark doorway to the east.").toLowerCase();
+//                if(castle == "stairs" || catsle == "go down" || castle == "down"){
+//                    var basement = prompt ("You enter the basement. It is ark except for the faint glow of a torch at the end of a long hallway extending to the south.")  
+//                }
+//                else if (castle == " east" || castle == "dark doorway"){
+//                  alert("You come eye to eye with a ghostly wraith! The last this you hear is your own scream! THE END!");               
+//                }
+//                else{
+//                    alert("You loose your footing anad fall hitting your head on the stone floor. THE END!");
+//                }
+//                
+//            }                
+//            else{
+//                ("You stray from the path and disapper forever! THE END!");
+//            }
+//        }
+//        else if(beginAdv == "east"){
+//            
+//        }
+//        else if(beginAdv == "south"){
+//        }
+//        else if(beginAdv == "north"){
+//        }
         
     </script>
 </body>
