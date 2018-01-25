@@ -9,18 +9,18 @@
 <body>
     <script>
 //        document.write("<h1 style='color:blue'>Adventure Game 1.0</h1>");
-        start();
+        Start();
         
-        function start(){ 
+        function Start(){ 
             
             var playerName = prompt("What is your name?");
         
-            alert("Welcome to the land of yababa" + playerName);
+            alert("Welcome to the land of yababa " + playerName);
         
             var startGame = confirm("Are you ready to begin your adventure?")
             
             if(startGame){
-                villiage();
+                Village();
             }
             else{
                 alert("Goodbye");
@@ -29,24 +29,27 @@
         }
         
          
-       function villiage(){
-             var villiage = prompt("You arrive at a villiage. There is a blacksmith,inn, stable and several wooden homes").toLowerCase();
+       function Village(){
+             var village = prompt("You arrive at a small villiage. There is a blacksmith ,inn, stable and several wooden homes").toLowerCase();
             
-           switch(villiage){
+           switch(village){
            
            case "blacksmith":
-                alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.")
+                alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
+                Village();
            break;
            case "inn":
-                alert("You enter the old weather torn inn the innkeeper asks what he can do for you? Rent a room. Buy food. Sit by the hearth fire.");
+                alert("You enter the old weather torn inn. The innkeeper asks what he can do for you? Rent a room. Buy food. Sit by the hearth fire.");
+                Village();
             break;
             case "stable":
-                   alert("The stable master inorms you that all the hores have been stolen last night. He asks you for your help?")
+                   alert("The stable master informs you that all the horses have been stolen last night. He asks you for your help?");
+                    Village();
             break;
             default:
-                   alert("I do not understand" + villiage);
+                   alert("I do not understand" + village);
                    
-                   villiage();
+                   Village();
            }
                    
        }
