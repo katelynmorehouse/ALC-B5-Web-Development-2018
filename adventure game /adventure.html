@@ -7,15 +7,35 @@
 </head>
 
 <body>
+    <h1>Adventure Game v1.0</h1>
+    <p>Made by: Katelyn Morehouse!!!!</p>
     <script>
 //        document.write("<h1 style='color:blue'>Adventure Game 1.0</h1>");
+        var inventory = {
+            sword:0,
+            bread:0,
+            meat:0,
+            fish:0,
+            goldkey:0,
+        }
+        
+        var player = {
+            firstname:"",
+            lastname:"",
+            gender:"",
+            age:"",
+            height:"",
+            hairColor:"",
+        }
+        
+        
         Start();
         
         function Start(){ 
             
-            var playerName = prompt("What is your name?");
+            player.firstName = prompt("What is your name travellor?");
         
-            alert("Welcome to the land of yababa " + playerName);
+            alert("Welcome to the land of yababa " + player.firstName);
         
             var startGame = confirm("Are you ready to begin your adventure?")
             
@@ -36,23 +56,77 @@
            
            case "blacksmith":
                 alert("The blacksmith scowls at you and mumbles something rude! You walk away intimidated.");
+                var blacksmith = prompt ("Do you want to by a sword?");
+                if(blacksmith == "buy sword"){
+                    alert("You bought a sword, congratulaions!")
+                    inventory.sword ++;
+                    alert("sword=1")
+                   }
                 Village();
            break;
            case "inn":
                 alert("You enter the old weather torn inn. The innkeeper asks what he can do for you? Rent a room. Buy food. Sit by the hearth fire.");
+                var inn = prompt ("Do you want to rent a room?");
+                if(inn == "rent a room"){
+                    alert("You are now renting a room, congratulaions!")
+                    inventory.inn ++;
+                    alert("rented rooms = 1")
+                   }
                 Village();
             break;
             case "stable":
-                   alert("The stable master informs you that all the horses have been stolen last night. He asks you for your help?");
+                   alert("The stable master informs you that all the horses have been stolen last night. He asks you for your help?"); 
+                   var stable = prompt ("Do you want to help the stable master?");
+                   if(stable== "help stable master"){
+                    alert("You are now helping the stable master, congratulaions!")
+                    inventory.stable ++;
+                    alert("good deads = 1")
+                   }
                     Village();
             break;
+            case "east":
+                Forest();
+            break;
+            case "west":
+                Mountain();
+            break;
+            case"north":
+                Lake();
             default:
-                   alert("I do not understand" + village);
+                   alert("I do not understand " + village);
                    
                    Village();
            }
                    
        }
+        function Forest(){
+            var forest = prompt("You enter into a jungle with mythological creatures, you have an axe, wood, or shelter").toLowerCase();
+            switch(forest){
+            
+            case "axe":
+                alert("The axe can only kill the mythological creatures, it won't cut into wood"); Forest();
+                var axe = prompt ("Do you want an axe?");
+                if(axe == "get the axe"){
+                    alert("You now have an axe, congratulaions!")
+                    inventory.axe ++;
+                    alert("axes = 1")
+                   }
+            break;
+            case "wood":
+                alert("You gather wood for a fire, or to build shelter, orfor weapons"); Forest();
+                var wood = prompt ("Do you want wood?");
+                if(wood == "get the wood"){
+                    alert("You now have wood, congratulaions!")
+                    inventory.wood ++;
+                    alert("wood = 1")
+                   }
+            break;
+            case "shelter":
+                alert("")
+                    
+                         }
+        
+        }
    
            
         
