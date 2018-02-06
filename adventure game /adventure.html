@@ -50,7 +50,7 @@
         
          
        function Village(){
-             var village = prompt("You arrive at a small villiage. There is a blacksmith ,inn, stable and several wooden homes").toLowerCase();
+             var village = prompt("You arrive at a small villiage. There is a blacksmith ,inn, stable and a path to the east and to the west").toLowerCase();
             
            switch(village){
            
@@ -89,9 +89,6 @@
             break;
             case "west":
                 Mountain();
-            break;
-            case"north":
-                Lake();
             default:
                    alert("I do not understand " + village);
                    
@@ -100,38 +97,46 @@
                    
        }
         function Forest(){
-            var forest = prompt("You enter into a jungle with mythological creatures, you have an axe, wood, or shelter").toLowerCase();
+            var forest = prompt("You enter into a jungle with mythological creatures, you can collect an axe, wood, or shelter").toLowerCase();
             switch(forest){
             
             case "axe":
-                alert("The axe can only kill the mythological creatures, it won't cut into wood"); Forest();
+                alert("The axe can only kill the mythological creatures, it won't cut into wood"); 
                 var axe = prompt ("Do you want an axe?");
                 if(axe == "get the axe"){
                     alert("You now have an axe, congratulaions!")
                     inventory.axe ++;
                     alert("axes = 1")
                    }
+                    Forest();
             break;
             case "wood":
-                alert("You gather wood for a fire, or to build shelter, orfor weapons"); Forest();
+                alert("You gather wood for a fire, or to build shelter, orfor weapons"); 
                 var wood = prompt ("Do you want wood?");
                 if(wood == "get the wood"){
                     alert("You now have wood, congratulaions!")
                     inventory.wood ++;
                     alert("wood = 1")
                    }
+                    Forest();
             break;
             case "shelter":
                 alert("You arrive a at a house in the middle of the jungle, it has electricity, water, and food. Along with that the mythological creatures can live in there also."); 
                 var shelter = prompt ("Do you want shelter?");
-                if(wood == "get the shelter"){
+                if(shelter == "get the shelter"){
                     alert("You now have shelter, congratulaions!")
                     inventory.shelter++;
                     alert("shelter = 1")
                    }
+                    Forest();
                     
                          }
         
+        }
+        function Mountain(){
+            var mountain = prompt("You enter the mountains with rigid edges and deep cliffs you make a wrong step and fall. Goodbye").toLowerCase();
+                    
+                
         }
    
            
