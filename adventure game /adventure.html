@@ -107,16 +107,18 @@
                     alert("You now have an axe, congratulaions!")
                     inventory.axe ++;
                     alert("axes = 1")
-                   }
+                     Win();
+                   } 
                     Forest();
             break;
             case "wood":
-                alert("You gather wood for a fire, or to build shelter, orfor weapons"); 
+                alert("You gather wood for a fire, or to build shelter, or for weapons"); 
                 var wood = prompt ("Do you want wood?");
                 if(wood == "get the wood"){
-                    alert("You now have wood, congratulaions! You killed all the mythological creatures off you and stayed alive you win!!!!")
+                    alert("You now have wood, congratulaions! ")
                     inventory.wood ++;
                     alert("wood = 1")
+                    
                    }
                     Forest();
             break;
@@ -131,13 +133,22 @@
             
                     Forest();
                     
-                         }
+            }
         
         }
         function Mountain(){
             var mountain = prompt("You enter the mountains with rigid edges and deep cliffs you make a wrong step and fall. Goodbye").toLowerCase();
-                    
+           Loose();  
+        }
+
                 
+        function Win(){
+            alert("You killed all the mythological creatures off you and stayed alive you win!!!!");
+            
+        }
+        function Loose(){
+            alert("You enter the mountains with rigid edges and deep cliffs you make a wrong step and fall. Goodbye")
+            
         }
         
    
