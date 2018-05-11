@@ -1,8 +1,5 @@
-/*Stylesheet for Silly Lily's Haunted House's */
-
-/* Global Style */
 body{
-    background-color:mediumpurple;
+    background-color:gray;
 }
 
 #container{
@@ -15,17 +12,17 @@ header{
     width:100%
     height:150px;
     background-color: white;
-    background-image:url("stripped.jpg");
+    background-image:url("background%20plant.jpeg");
     background position;align-content:center;
     background-size: 1220px;
-    border: 2px dotted orange; 
+    border: 2px white;
     margin:0;
     padding:0;}
 
 
 header h1 {
-    color:purple;
-    text-shadow: 1px 1px 1px orange;
+    color:lightblue;
+    text-shadow: 1px 1px 1px black;
     text-align: center;
     margin:50px;
     font-family: 'Amatic SC', cursive;
@@ -38,14 +35,14 @@ nav{
     margin:0;
     padding:0;
     clear: both;
-    box-shadow:1px 1px 2px black;
+    box-shadow:1px 1px 2px grey;
 } 
 
 nav ul{
     margin:0;
     padding:0;
     list-style:none;
-    color:white;
+    color:black;
 }
 
 nav ul li {
@@ -55,17 +52,17 @@ nav ul li {
 nav ul li a {
     display: block;
     text-decoration: none;
-    color: white;
+    color:black;
     text-align: center;
     padding: 14px 16px
 }
 
 nav ul li a:hover {
-    background-color: blueviolet;   
+    background-color: white;   
 }
 
 nav .active{
-    background-color: blueviolet; 
+    background-color: white; 
 }
 
 #content{
@@ -86,40 +83,36 @@ footer{
 }
 
 
-/* index.html style */
 #imgMain{
     display:block;
     width:400px;
     margin:10px;
     height: 200px;
-        border:5px pink outset;
+        border:5px black outset;
     float: left;
-    
-    /*
-    margin-top: 3px;
-    margin-right: 20px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    */
+  
 }
 #h2-main{
     float: left;
-    width:800px;
+    width:300px;
     clear: right;
-    color:black;
-    text-shadow: 1px 1px 10px white;
-/*    margin-left: 10px;*/
-    margin-left: 0px;
-    margin-right: 0px;
+    color:white;
+    text-shadow: 1px 1px 10px grey;
+    margin-left: 1px;
+    margin-right: 10px;
+     font-family: 'Amatic SC', cursive;
+    font-size: 2.5em;
 }
 
 
 #p-Main{
     float:left;
-    width: 1000px;
+    width: 100%;
+    font-size: 1.3em;
+    margin-top: 0;
     
 }
-img#s-silly{
+img#profile{
     display:block;
     width: 400px;
     margin: 10px;
@@ -127,37 +120,44 @@ img#s-silly{
 }
 h2#h2-about{
    float:left;
-    margin-top: 5px;
-    margin-bottom: 0px;
+    margin-top: 20px;
+    font-family: cursive;
+    margin-bottom: 10px;
+    font-size: 2em;
     
+    
+}
+
+h2.header{
+     font-family: 'Amatic SC', cursive;
+    color: pink;
+    font-size: 3em;
 }
 p#p-about{
     float:left;
     width: 800px;
-    margin-top:10px;
+    margin-top:30px;
     clear: right;
 }
 
-/* produce.html */
 #gallery{
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    border:3px dotted white;
+    border:10px grey;
     width:100%;
    
 }
 figure{
     border:2px black outset;
     box-shadow: 1px 1px 2px black;
-    background-color:darkblue;
+    background-color:gray;
     width: 300px;
     float: left;
     margin: 10px 15px;
     flex: 0 0 30%
     
-        /*CSS Gradient*/
 }
 
 figure img{
@@ -172,16 +172,35 @@ figcaption{
     text-align: center;
     margin-bottom: 10px;
     font-family:sans-serif;
+    color:aliceblue;
 }
 
-#h-haunting {
+#profile {
     align-self: center;
 }
 
-/* contact.html */
-h2#h2- contact{
+#my-skills {
+    display: flex;
+    justify-content: center;
+}
+
+#my-awards {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    text-align: center;
+}
+
+h2.contact{
     margin: 15px;
     float:left;
+     font-family: 'Amatic SC', cursive;
+    color: lightblue;
+    box-shadow: 1px 1px 2px black;
+    font-size: 1.5em;
+   
 }
 form#form-contact{
     display: flex;
@@ -205,41 +224,79 @@ div#contact-content {
     flex-direction: row;
     justify-content: space-around;
     max-width: 1200px;
+    font-family: 'Amatic SC', cursive;
+    color: lightblue;
+    font-size: 1.5em;
 }
 
 .description {
     display: flex;
     flex-direction: column;
 }
+#BTNsend{
+    width: 40%;
+    height: 40px;
+    margin:10px auto;
+    
+}
+
+#images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+
+img{
+    display: block;
+    margin-top: 20px;
+}
 
 
 
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 64px;
+    }
+    
+    nav{
+    float: none;
+    width: 100%;
+    background-color: grey;
+    margin:0;
+    padding:0;
+    clear: both;
+    box-shadow:1px 1px 2px grey;
+} 
 
+    nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    color:black;
+    }
 
+    nav ul li {
+    float: none;    
+    }
 
+    nav ul li a {
+    display: block;
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    padding: 14px 16px
+    }
 
+    nav ul li a:hover {
+    background-color: white;   
+    }
 
+    nav .active{
+    background-color: white; 
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
